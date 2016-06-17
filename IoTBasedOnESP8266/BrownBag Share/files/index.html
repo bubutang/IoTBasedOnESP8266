@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+        <meta name="viewport" content="width=device-width">
+        <title>ESP8266 WIFI</title>
+        <link rel="stylesheet" href="lib.bootstrap.min.css">
+        <style type="text/css">
+            .color-btn {
+                width: 50px;
+                height: 50px;
+                margin: 10px;
+            }
+
+        </style>
+        <!-- <link rel="stylesheet" href="http://192.168.1.192:8080/lib.bootstrap.min.css">
+    <link rel="stylesheet" href="http://192.168.1.192:8080/app.css"> -->
+
+    </head>
+    <body class="container">
+
+        <section style="margin-top:20px" class="alert alert-dismissible alert-warning">
+            <h4>你好!</h4>
+            <p>基于ESP8266芯片的简单物联网(IOT)应用</p>
+        </section>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-danger ">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">实时温度显示</h3>
+                    </div>
+                    <div class="panel-body" style="margin-right:45px">
+                        <canvas id="temperature"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">实时湿度显示</h3>
+                    </div>
+                    <div class="panel-body" style="margin-right:45px">
+                        <canvas id="humidity"></canvas>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="" style="text-align:center">
+            <!-- <input class="btn btn-primary" type="button" value="开灯" onClick="toggleLED(1)"></input>
+            <input class="btn btn-primary" type="button" value="关灯" onClick="toggleLED(0)"></input> -->
+            <input class="btn color-btn btn-danger " type="button" value="" onClick="sentColor(0xcc0000)"></input>
+            <input class="btn color-btn btn-success" type="button" value="" onClick="sentColor(0x77b300)"></input>
+            <input class="btn color-btn btn-primary" type="button" value="" onClick="sentColor(0x2a9fd6)"></input>
+            <input class="btn color-btn btn-info" type="button" value="" onClick="sentColor(0x9933cc)"></input>
+            <input class="btn color-btn btn-warning" type="button" value="" onClick="sentColor(0xff8800)"></input>
+
+        </div>
+
+        <script src="lib.jquery.min.js"></script>
+        <script src="lib.Chart.min.js"></script>
+        <script src="app.js"></script>
+
+    </body>
+
+</html>
