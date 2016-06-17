@@ -1,0 +1,14 @@
+prefix=/Users/tangxiaobo/Downloads/FFmpeg-iOS-build-script-master/thin/x86_64
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+Name: libavfilter
+Description: FFmpeg audio/video filtering library
+Version: 5.16.101
+Requires: libswscale >= 3.1.101, libpostproc >= 53.3.100, libavformat >= 56.36.100, libavcodec >= 56.41.100, libswresample >= 1.2.100, libavutil >= 54.27.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavfilter -framework CoreVideo -framework Foundation -framework AVFoundation -framework CoreMedia -liconv -lx264 -lm -lbz2 -lz -pthread
+Libs.private: 
+Cflags: -I${includedir}
